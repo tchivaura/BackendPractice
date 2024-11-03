@@ -1,0 +1,86 @@
+@Restaurants.API_HostAddress = http://localhost:5049
+@token=CfDJ8DseCJ4RTS9GvHCkQaqQOsoAzaicatvxaA6yMsU6FqcDWmyl-jqkcMBf0Hg2Yxd2b3wqm_AC8f-LQJle-G28RkVSmAOWhpM5DuTD13ptEKvBJO9S63a_EWwAJn2pWptMcshY2bBTp6JYAPKhNLw0qVDuxPSbiXOlr10KewceZoCzWcCh3h4XUgA2k37nAO0jOrkPhraOXBHNuEZ8NOOYmlWhJ0-6JWPoVdeYtpHhzUwbDCxh7BWSdNpQh8maBWoRYJccmkWaYSPm7ghOT4ynRLoBAcfBJV_m015R8CAFthdhaE-_Lf1YjAgmeviiXJ74PQ59Lq9Nkpkoq52lvwLPhNf1YI3oyr1LMRbsx7C43hGbyrTwHX2SrVAh0K7CzpthTqg4EKGakW4LUWOzA4JL1p_zdoz2I2FiiIhsQJlDNdE9UkJ9cufXFGxVLLPEau0sBTELd_j_TGlnwQpIqYeuivrZaXV-lcKZ7sOxoJ647wuVRaXMNIK5OYOAnd0ruoNgYwEhPzrJv8fScvz9BU9YjyReFUNRWBDV1UDPX2S9EMYyfyp3cUC8XWoF9-WoI1dVcP4wUwlGNTxGtmED0OITlU1afkkMOgipE5hiAAGFWI6Gg04qDTsl5W1vmHQve1sn_5wOFWRKVMJjTkrcXbUFEsEWT4G4AWKjtJpMfU_MgHST2tYL0mbv2m-uphOAeTsn-mMBTudQaFhpW14qSn9I3S-asgdRUEjHzIUWohupHT6O39Gast74FLs_dmMZ8VZvj5oHaNH16elAQWLADzbtvZWfvvdKyIpvkwP0ToE75w-I
+GET {{Restaurants.API_HostAddress}}/api/resturants
+Accept: application/json
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/resturants
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  
+  "name": "Mancin",
+  "description": "Sea Food",
+  "category": "SeaFood",
+  "hasDelivery": true,
+  "city": "Harare",
+  "street": "Lavenham",
+  "postalCode": "000",
+  
+  "Dish":[]
+}
+
+
+###
+DELETE {{Restaurants.API_HostAddress}}/api/resturants/2
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+PATCH  {{Restaurants.API_HostAddress}}/api/resturants/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+{
+  
+  "name": "Gava",
+  "description": "Traditional",
+  "category": "SeaFood",
+  "hasDelivery": true
+  
+}
+
+
+###
+POST {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes
+Content-Type: application/json
+
+{
+  
+ "name": "Hot Pot",
+  "description": "rice",
+  "price":4
+  
+}
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes/1
+Accept: application/json
+Authorization: Bearer {{token}}
+###
+GET {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes
+Accept: application/json
+
+###
+DELETE  {{Restaurants.API_HostAddress}}/api/restaurant/4/dishes
+Accept: application/json
+Authorization: Bearer {{token}}
+###
+POST {{Restaurants.API_HostAddress}}/api/identity/register
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "224490@Hi"
+}
+
+###
+POST {{Restaurants.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+  "email": "owner@gmail.com",
+  "password": "224490@Hi"
+}
