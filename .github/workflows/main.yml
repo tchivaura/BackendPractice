@@ -23,12 +23,12 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
-        working-directory: ../
+        working-directory: ../Restaurants.sln
 
       - name: Build
         run: dotnet build --no-restore
-        working-directory: ../
+        working-directory: ../Restaurants.sln
         
       - name: Test
         run: dotnet test
-        working-directory: ../
+        working-directory: ../Restaurants.sln
