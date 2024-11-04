@@ -23,12 +23,12 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
-        working-directory: ./tchivaura/BackendPractice
+        working-directory: ../
 
       - name: Build
         run: dotnet build --no-restore
-        working-directory: ./tchivaura/BackendPractice
+        working-directory: ../
         
       - name: Test
         run: dotnet test
-        working-directory: ./tchivaura/BackendPractice
+        working-directory: ../
