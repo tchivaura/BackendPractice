@@ -26,8 +26,8 @@ jobs:
        
       - name: Build
         run: dotnet build --no-restore
-        working-directory: ./Restaurants.sln
+        
         
       - name: Test
         run: dotnet test
-        working-directory: ./Restaurants.sln
+        
